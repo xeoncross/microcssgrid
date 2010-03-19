@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Micro CSS Grid</title>
+
+	<link href="grid.css" type="text/css" rel="stylesheet" media="screen" />
+	<style type="text/css" media="screen">
+		body {
+			margin: 20px 0 0 0;
+			text-align: center;
+			background: #fff;
+			font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		div p {
+			border: 1px solid #aaa;
+			margin: 0 0 20px 0;
+			background: #fff;
+			font-size: 50px;
+			line-height: 2em;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="grid_12"><h3>The following rows each total twelve columns (960px / 60px = 12)</h3></div>
+
+
+	<!-- full length div -->
+	<div class="grid_12"><p>12</p></div>
+
+
+	<!-- two columns-->
+	<div class="grid_6"><p>6</p></div>
+	<div class="grid_6"><p>6</p></div>
+
+
+	<!-- spanning two rows -->
+	<div class="grid_8"><p>8</p>
+		<div class="container">
+			<div class="grid_4"><p>4</p></div>
+			<div class="grid_4"><p>4</p></div>
+		</div>
+	</div>
+	<div class="grid_4"><p style="line-height: 222px;">4</p></div>
+
+
+	<!-- 12 columns -->
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+	<div class="grid_1"><p>1</p></div>
+
+
+	<!-- complex multi-row spans -->
+	<div class="grid_4"><p>4</p>
+		<div class="container">
+			<div class="grid_3"><p>3</p></div>
+			<div class="grid_1"><p>1</p></div>
+		</div>
+		<div class="container">
+			<div class="grid_2"><p>2</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+		</div>
+		<div class="container">
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+		</div>
+	</div>
+	<div class="grid_4"><p style="line-height: 466px;">4</p></div>
+	<div class="grid_4"><p>4</p>
+		<div class="container">
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_3"><p>3</p></div>
+		</div>
+		<div class="container">
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_2"><p>2</p></div>
+		</div>
+		<div class="container">
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+			<div class="grid_1"><p>1</p></div>
+		</div>
+	</div>
+
+
+	<!-- using extra spaces -->
+	<div class="grid_5 prefix"><p>(+1) 5</p></div>
+	<div class="grid_5 suffix"><p>5 (+1)</p></div>
+
+
+	<!-- More information -->
+	<div class="grid_12">
+		<h3><a href="http://github.com/Xeoncross/microcssgrid">http://github.com/Xeoncross/microcssgrid</a></h3>
+	</div>
+
+</div>
+
+</body>
+</html>
